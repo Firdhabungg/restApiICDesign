@@ -60,10 +60,10 @@ class Akun extends REST_Controller {
     // Register
     public function register_post() {
         // Set aturan validasi
-        $this->form_validation->set_rules('username', 'Username', 'trim|required|min_length[5]|max_length[20]|is_unique[akun.username]', [
+        $this->form_validation->set_rules('username', 'Username', 'trim|required|min_length[4]|max_length[20]|is_unique[akun.username]', [
             'required' => 'Username wajib diisi',
             'is_unique' => 'Username sudah digunakan',
-            'min_length' => 'Username minimal 5 karakter',
+            'min_length' => 'Username minimal 4 karakter',
             'max_length' => 'Username maksimal 20 karakter'
         ]);
         
